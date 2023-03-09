@@ -1,33 +1,17 @@
-{% include "header.html" %}
+{% include "separate/header.html" %}
 
-<div class="content">
+<div class="content bg-secondary">
   <div
     id="carouselExampleFade"
     class="carousel slide carousel-fade pe-5 ps-5 py-5"
     data-bs-ride="carousel"
   >
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
-          class="d-block w-100"
-          alt="..."
-        />
+    <div class="carousel-inner shadow-sm p-2 mb-2 bg-body rounded">
+      {%for i in carousel%}
+      <div class="carousel-item {{ 'active' if (carousel.index(i)==0)}}">
+        <img src="{{i}}" class="d-block w-100" alt="..." />
       </div>
-      <div class="carousel-item">
-        <img
-          src="https://media.istockphoto.com/id/1316134499/photo/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.jpg?b=1&s=170667a&w=0&k=20&c=e-i4hdu7dT3PIuf4xQMglnnORiwBAC_ZUgXw6aorB1M="
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://media.istockphoto.com/id/1389705737/photo/fomo-acronym-fear-of-missing-out-on-magnifier-isolated-on-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=O4zIOeY-KEetfPYPdZVc_Ut2pM3A72jFcd_eqEJcUOw="
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
+      {%endfor%}
     </div>
     <button
       class="carousel-control-prev"
@@ -50,4 +34,4 @@
   </div>
 </div>
 
-{% include "footer.html" %}
+{% include "separate/footer.html" %}

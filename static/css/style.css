@@ -1,3 +1,9 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .navbar .navbar-collapse {
   text-align: center;
 }
@@ -6,4 +12,8 @@
   .navbar-brand {
     display: none !important;
   }
+}
+
+a {
+  text-decoration: none !important;
 }
